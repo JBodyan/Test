@@ -13,6 +13,8 @@ namespace TestApp.Validators
         {
             RuleFor(x => x.Code)
                 .Matches(@"\d{3}")
+                .MaximumLength(3)
+                .MinimumLength(3)
                 .NotEmpty();
 
             RuleFor(x => x.Name)
