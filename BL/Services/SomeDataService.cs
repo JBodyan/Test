@@ -39,10 +39,12 @@ namespace BL.Services
             {
                 var data = _mapper.Map<SomeData>(model);
                 _unitOfWork.SomeDataRepository.Update(data);
+                _unitOfWork.Commit();
                 return model;
             }
             catch (DbException)
             {
+                _unitOfWork.Rollback();
                 throw new Exception("Update exception");
             }
         }
@@ -53,10 +55,12 @@ namespace BL.Services
             {
                 var data = _mapper.Map<SomeData>(model);
                 _unitOfWork.SomeDataRepository.Add(data);
+                _unitOfWork.Commit();
                 return model;
             }
             catch (DbException)
             {
+                _unitOfWork.Rollback();
                 throw new Exception("Add exception");
             }
         }
@@ -68,9 +72,11 @@ namespace BL.Services
                 var data = _unitOfWork.SomeDataRepository.GetById(id);
                 if(data == null) throw new Exception("Data not found");
                 _unitOfWork.SomeDataRepository.Remove(data);
+                _unitOfWork.Commit();
             }
             catch (DbException)
             {
+                _unitOfWork.Rollback();
                 throw new Exception("Remove exception");
             }
         }
