@@ -14,27 +14,27 @@ namespace Data.Repository
         {
             _entities = context.Set<T>();
         }
-        public IQueryable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
             return _entities.AsQueryable();
         }
 
-        public T GetById(params object[] keys)
+        public virtual T GetById(params object[] keys)
         {
             return _entities.Find(keys);
         }
 
-        public void Add(T entity)
+        public virtual void Add(T entity)
         {
             _entities.Add(entity);
         }
 
-        public void Update(T entity)
+        public virtual void Update(T entity)
         {
             _entities.Update(entity);
         }
 
-        public void Remove(T entity)
+        public virtual void Remove(T entity)
         {
             _entities.Remove(entity);
         }
