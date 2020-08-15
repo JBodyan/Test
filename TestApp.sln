@@ -3,11 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{EF218EBE-B980-44D5-BC9C-C06A57644145}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "TestApp\TestApp.csproj", "{EF218EBE-B980-44D5-BC9C-C06A57644145}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{ACC81878-AEB8-404F-A66F-770A933236BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{ACC81878-AEB8-404F-A66F-770A933236BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{A8D440B2-7322-4D29-A638-48B122E63A10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL", "BL\BL.csproj", "{A8D440B2-7322-4D29-A638-48B122E63A10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Front", "Front", "{8E6A2A5C-8C2F-4610-A1A3-E163145702CF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Program Files (x86)\xampp\htdocs\index.html = ..\..\..\..\Program Files (x86)\xampp\htdocs\index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{B64C4F08-5933-4DCE-9279-D35A5E8258C2}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Program Files (x86)\xampp\htdocs\js\events.js = ..\..\..\..\Program Files (x86)\xampp\htdocs\js\events.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{66CDD4F6-6558-490B-A218-41762E10833F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Program Files (x86)\xampp\htdocs\css\styles.css = ..\..\..\..\Program Files (x86)\xampp\htdocs\css\styles.css
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +45,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B64C4F08-5933-4DCE-9279-D35A5E8258C2} = {8E6A2A5C-8C2F-4610-A1A3-E163145702CF}
+		{66CDD4F6-6558-490B-A218-41762E10833F} = {8E6A2A5C-8C2F-4610-A1A3-E163145702CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E56F4C59-C8F7-4E35-88F7-36DF7317B20F}
