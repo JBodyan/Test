@@ -1,0 +1,52 @@
+.container {
+    background-color: whitesmoke;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+}
+
+.container-update {
+    border: 1px black solid;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-add {
+    border: 1px black solid;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-input {
+    padding: 4px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-input > label {
+    padding: 4px;
+    flex: 1;
+}
+
+.container-input > input {
+    flex: 2;
+}
+
+.container-content {
+    background-color: wheat;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+}
+
+.table {
+    border: 1px black solid; 
+}
+
+.table > thead {
+    border: 1px aqua solid;
+}
