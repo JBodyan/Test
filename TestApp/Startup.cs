@@ -54,7 +54,6 @@ namespace TestApp
                 options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader()
-                    .WithExposedHeaders("Token-Expired", "InvalidRefreshToken", "InvalidCredentials")
                     .Build());
             });
 
@@ -76,6 +75,8 @@ namespace TestApp
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("CorsPolicy");
 
             app.UseRouting();
 

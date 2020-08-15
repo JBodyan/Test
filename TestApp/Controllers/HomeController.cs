@@ -52,6 +52,7 @@ namespace TestApp.Controllers
         {
             try
             {
+                model.Id = id;
                 _someDataService.Update(model);
                 return NoContent();
             }
