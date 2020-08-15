@@ -49,6 +49,15 @@ namespace TestApp
             
             services.AddScoped<ISomeDataService, SomeDataService>();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .WithExposedHeaders("Token-Expired", "InvalidRefreshToken", "InvalidCredentials")
+                    .Build());
+            });
+
             services.AddMvc().AddFluentValidation(config =>
             {
                 config.RegisterValidatorsFromAssemblyContaining<SomeDataAddValidator>();
